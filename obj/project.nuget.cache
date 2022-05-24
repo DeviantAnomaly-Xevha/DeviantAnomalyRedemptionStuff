@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dUJJuMPeVLYiB19RlkQSeHd1tBCeBU19uuJBZBGUkzgsSlzkEAz2NFbxp3IAsx82SHtAkDwipBgl5vMq0BoAlg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\deviantanomaly\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\DeviantAnomalyRedemptionStuff\\DeviantAnomalyRedemptionStuff.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deviantanomaly\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
