@@ -34,8 +34,8 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
             if (target.defDefense >= Projectile.damage * .75 || target.takenDamageMultiplier <= .25)
             {
                 SoundEngine.PlaySound(new SoundStyle("DeviantAnomalyRedemptionStuff/Sounds/CrystalBomb/CrystalPillar_shatter"), Projectile.position);
-                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X - 2, Projectile.Center.Y), new Vector2(-1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombChargedLeftHalf_Proj").Type, Projectile.damage / 6, 0, Main.myPlayer);
-                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X + 2, Projectile.Center.Y), new Vector2(1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombChargedRightHalf_Proj").Type, Projectile.damage / 6, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X - 2, Projectile.Center.Y), new Vector2(-1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombChargedLeftHalf_Proj").Type, Projectile.damage / 3, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X + 2, Projectile.Center.Y), new Vector2(1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombChargedRightHalf_Proj").Type, Projectile.damage / 3, 0, Main.myPlayer);
                 Projectile.Kill();
             }
             if (ModLoader.TryGetMod("Redemption", out var otherMod))
@@ -63,7 +63,7 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            int a = Projectile.NewProjectile(Projectile.InheritSource(Projectile), Projectile.Center, new Vector2(0, 0), Mod.Find<ModProjectile>("XenomiteCrystalBombChargedPillarSpawner_Proj").Type, Projectile.damage / 6, 0, Main.myPlayer);
+            int a = Projectile.NewProjectile(Projectile.InheritSource(Projectile), Projectile.Center, new Vector2(0, 0), Mod.Find<ModProjectile>("XenomiteCrystalBombChargedPillarSpawner_Proj").Type, Projectile.damage / 3, 0, Main.myPlayer);
             if (Projectile.velocity.X > 0f)
             {
                 Main.projectile[a].velocity.X = 25f;

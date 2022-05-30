@@ -22,10 +22,11 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = DamageClass.Magic;
-            Projectile.timeLeft = 120;
+            Projectile.timeLeft = 300;
             Projectile.ignoreWater = false;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 30;
+            Projectile.AI_156_GetColor;
         }
         public override void DrawBehind(int index, List<int> behindNPCsAndTiles, List<int> behindNPCs, List<int> behindProjectiles, List<int> overPlayers, List<int> overWiresUI)
         {
@@ -55,6 +56,14 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
                     target.AddBuff(BuffID.CursedInferno, 150, false);
                 }
             }
+            SoundEngine.PlaySound(new SoundStyle("DeviantAnomalyRedemptionStuff/Sounds/CrystalBomb/CrystalPillar_shatter"), Projectile.position);
+
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X, Projectile.Center.Y - 16f), new Vector2(0f - Main.rand.Next(1, 8), 0f - Main.rand.Next(1, 4)), Mod.Find<ModProjectile>($"XenomiteCrystalPillarShard{Main.rand.Next(1, 5)}_Proj").Type, 0, 0, Main.myPlayer);
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X, Projectile.Center.Y - 16f), new Vector2(0f - Main.rand.Next(1, 6), 0f - Main.rand.Next(1, 8)), Mod.Find<ModProjectile>($"XenomiteCrystalPillarShard{Main.rand.Next(1, 5)}_Proj").Type, 0, 0, Main.myPlayer);
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X, Projectile.Center.Y - 16f), new Vector2(1f - Main.rand.Next(0, 2), 0f - Main.rand.Next(1, 12)), Mod.Find<ModProjectile>($"XenomiteCrystalPillarShard{Main.rand.Next(1, 5)}_Proj").Type, 0, 0, Main.myPlayer);
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X, Projectile.Center.Y - 16f), new Vector2(0f + Main.rand.Next(1, 6), 0f - Main.rand.Next(1, 8)), Mod.Find<ModProjectile>($"XenomiteCrystalPillarShard{Main.rand.Next(1, 5)}_Proj").Type, 0, 0, Main.myPlayer);
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X, Projectile.Center.Y - 16f), new Vector2(0f + Main.rand.Next(1, 8), 0f - Main.rand.Next(1, 4)), Mod.Find<ModProjectile>($"XenomiteCrystalPillarShard{Main.rand.Next(1, 5)}_Proj").Type, 0, 0, Main.myPlayer);
+            Projectile.Kill();
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
         {

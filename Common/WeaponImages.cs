@@ -24,7 +24,7 @@ namespace DeviantAnomalyRedemptionStuff.Common
         {
             if (XenomiteBusterTexture == null)
             {
-                XenomiteBusterTexture = ModContent.Request<Texture2D>("DeviantAnomalyRedemptionStuff/Content/Items/Weapons/Magic/XenomiteBuster");
+                XenomiteBusterTexture = ModContent.Request<Texture2D>("DeviantAnomalyRedemptionStuff/Content/Items/Weapons/Magic/XenomiteBusterWeaponImage");
             }
             var position = drawInfo.Center + new Vector2(0, 0) - Main.screenPosition;
             position = new Vector2((int)position.X, (int)position.Y - 3);

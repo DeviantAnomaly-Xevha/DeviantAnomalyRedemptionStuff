@@ -34,8 +34,8 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
             if (target.defDefense >= Projectile.damage * .75 || target.takenDamageMultiplier <= .25)
             {
                 SoundEngine.PlaySound(new SoundStyle("DeviantAnomalyRedemptionStuff/Sounds/CrystalBomb/CrystalPillar_shatter"), Projectile.position);
-                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X - 2, Projectile.Center.Y), new Vector2(-1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombLeftHalf_Proj").Type, Projectile.damage / 2, 0, Main.myPlayer);
-                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X + 2, Projectile.Center.Y), new Vector2(1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombRightHalf_Proj").Type, Projectile.damage / 2, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X - 2, Projectile.Center.Y), new Vector2(-1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombLeftHalf_Proj").Type, Projectile.damage, 0, Main.myPlayer);
+                Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X + 2, Projectile.Center.Y), new Vector2(1f, -1f), Mod.Find<ModProjectile>("XenomiteCrystalBombRightHalf_Proj").Type, Projectile.damage, 0, Main.myPlayer);
                 Projectile.Kill();
             }
             if (ModLoader.TryGetMod("Redemption", out var otherMod))
@@ -64,9 +64,9 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
             SoundEngine.PlaySound(new SoundStyle("DeviantAnomalyRedemptionStuff/Sounds/CrystalBomb/CrystalPillar_form"), Projectile.position);
-            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X, Projectile.Center.Y - 18), new Vector2(0, 12f), Mod.Find<ModProjectile>($"XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj").Type, Projectile.damage / 2, 0, Main.myPlayer);
-            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X - 25, Projectile.Center.Y - 9), new Vector2(0, 12f), Mod.Find<ModProjectile>($"XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj").Type, Projectile.damage / 2, 0, Main.myPlayer);
-            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X + 25, Projectile.Center.Y - 9), new Vector2(0, 12f), Mod.Find<ModProjectile>($"XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj").Type, Projectile.damage / 2, 0, Main.myPlayer);
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X, Projectile.Center.Y - 18), new Vector2(0, 12f), Mod.Find<ModProjectile>($"XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_1_Proj").Type, Projectile.damage, 0, Main.myPlayer);
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X - 25, Projectile.Center.Y - 9), new Vector2(0, 12f), Mod.Find<ModProjectile>($"XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj").Type, Projectile.damage, 0, Main.myPlayer);
+            Projectile.NewProjectile(Projectile.InheritSource(Projectile), new Vector2(Projectile.Center.X + 25, Projectile.Center.Y - 9), new Vector2(0, 12f), Mod.Find<ModProjectile>($"XenomiteCrystalPillar_{Main.rand.Next(1, 5)}_2_Proj").Type, Projectile.damage, 0, Main.myPlayer);
             return true;
         }
         public override void AI()
