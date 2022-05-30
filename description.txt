@@ -1,18 +1,12 @@
 Built for tModLoader Alpha 1.4-preview.
 If you use 1.4-stable and have issues, you know why.
 
-This's what will be a slowly-growing collection of additional items for use with the Redemption mod.
-Currently, it includes:
-1) my vanity set,
-2) a few extra vanity heads and hairstyles, and
+!!THIS IS NOT THE MOD OF REDEMPTION!!
+Go here to acquire it: https://discord.gg/J25aSxCadz
+
+This is a small mod containing just a few items:
+1) a vanity set and extra parts
 3) a weapon called the "Xenomite Crystal Bomb"
 (damage, DoTs, and projectile-reflecting crystal pillars)
 
 This is mainly for myself, but I hope you like it.
-
-If you've got any ideas or simple requests, or you're good at sprites and would like to make some things yourself, OR just feel like chatting, feel free to join us in Discord.
-https://discord.gg/J25aSxCadz
-
-----------
-
-Xenomite Crystal Bomb mana usage corrected.
