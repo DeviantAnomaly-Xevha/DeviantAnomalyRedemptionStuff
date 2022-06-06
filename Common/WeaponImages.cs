@@ -15,7 +15,7 @@ namespace DeviantAnomalyRedemptionStuff.Common
         private Asset<Texture2D> XenomiteBusterTexture;
         public override bool GetDefaultVisibility(PlayerDrawSet drawInfo)
         {
-            var itemTypes = new int[] { ModContent.ItemType<XenomiteCrystalBomb1>(), ModContent.ItemType<XenomiteCrystalBomb2>(), ModContent.ItemType<XenomiteCrystalBomb3>(), ModContent.ItemType<XenomiteCrystalBomb4>(), ModContent.ItemType<XenomiteCrystalBomb5>(), ModContent.ItemType<XenomiteCrystalBomb6>() };
+            var itemTypes = new int[] { ModContent.ItemType<XenomiteCrystalBomb1>(), ModContent.ItemType<XenomiteCrystalBomb2>(), ModContent.ItemType<XenomiteCrystalBomb3>(), ModContent.ItemType<XenomiteCrystalBomb4>(), ModContent.ItemType<XenomiteCrystalBomb5>(), ModContent.ItemType<XenomiteCrystalBomb6>(), ModContent.ItemType<XenomiteBuster1>(), ModContent.ItemType<XenomiteBuster2>(), ModContent.ItemType<XenomiteBuster3>(), ModContent.ItemType<XenomiteBuster4>(), ModContent.ItemType<XenomiteBuster5>(), ModContent.ItemType<XenomiteBuster6>() };
             return itemTypes.Contains(drawInfo.drawPlayer.HeldItem?.type ?? 0);
         }
         public override Position GetDefaultPosition() => new AfterParent(PlayerDrawLayers.HandOnAcc);

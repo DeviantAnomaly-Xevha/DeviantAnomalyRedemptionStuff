@@ -1,12 +1,26 @@
 Built for tModLoader Alpha 1.4-preview.
 If you use 1.4-stable and have issues, you know why.
 
-!!THIS IS NOT THE MOD OF REDEMPTION!!
-Go here to acquire it: https://discord.gg/J25aSxCadz
+<<THIS IS NOT THE MOD OF REDEMPTION!!>>
+The actual Redemption mod is not currently available through the mod browser, but you can acquire it in its current work-in-progress state by checking Discord.
+For Steam, here's your link: https://discord.gg/J25aSxCadz
+In-game, please click the Homepage button down below.
 
 This is a small mod containing just a few items:
-1) a vanity set and extra parts
-3) a weapon called the "Xenomite Crystal Bomb"
+1) various vanity parts, mostly Xenomite-based,
+2) a "Xenomite Crystal Bomb" weapon
 (damage, DoTs, and projectile-reflecting crystal pillars)
+3) a "Xenomite Buster" weapon
+(damage, DoTs, chargeable, based on Mega Man X)
 
-This is mainly for myself, but I hope you like it.
+The weapons can be upgraded as you progress.
+With Redemption, they apply Redemption's Xenomite debuffs.
+Without, they apply Poisoned, with a chance of Cursed Flames.
+
+
+This was created mainly for myself, but I hope you like it.
+
+
+----------------------------------------
+
+The weapon image is a PlayerDrawLayer and is slightly out of alignment when gravity is flipped. I'm not exactly sure how I can fix that...
