@@ -26,7 +26,6 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
             Projectile.ignoreWater = false;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = 30;
-            Projectile.AI_156_GetColor;
         }
         public override void DrawBehind(int index, List<int> behindNPCsAndTiles, List<int> behindNPCs, List<int> behindProjectiles, List<int> overPlayers, List<int> overWiresUI)
         {

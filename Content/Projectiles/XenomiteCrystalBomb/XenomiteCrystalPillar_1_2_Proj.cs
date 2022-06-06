@@ -110,7 +110,6 @@ namespace DeviantAnomalyRedemptionStuff.Content.Projectiles.XenomiteCrystalBomb
                     p.hostile = false;
                     p.friendly = true;
                     p.owner = Projectile.owner;
-                    Main.NewText("beep!");
                 }
             }
             Lighting.AddLight(Projectile.position, 0.54f, 0.86f, 0.27f);
